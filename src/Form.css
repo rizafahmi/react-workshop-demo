@@ -1,0 +1,10 @@
+form {
+  @apply flex justify-between py-2 px-3 my-4 rounded-md border-2;
+}
+input {
+  @apply w-3/4 bg-slate-100;
+}
+
+button[type="submit"] {
+  @apply bg-blue-400 text-slate-200 px-4;
+}

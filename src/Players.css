@@ -1,0 +1,26 @@
+.player {
+  @apply flex py-2 px-4 my-4 rounded-md border-2;
+}
+
+.name {
+  @apply flex-1 self-center font-medium;
+}
+
+.score {
+  padding: 20px;
+  @apply p-5 font-semibold text-lg;
+}
+
+button {
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+}
+
+button.decrement {
+  background-color: #e97b64;
+}
+
+button.increment {
+  background-color: #96caef;
+}

@@ -63,7 +63,7 @@ function App() {
 
 
   }
-  function handleDecrement(id) {
+  function handleDecrement(id: number) {
     console.log("Decrement:", id);
   }
 
@@ -78,7 +78,11 @@ function App() {
       {dataLoaded === true ? (
         <Players
           players={players}
+          /*
+      // @ts-ignore */
           handleIncrement={handleIncrement}
+          /*
+      // @ts-ignore */
           handleDecrement={handleDecrement}
         />
       ) : <h3>Loading data...</h3>}

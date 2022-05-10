@@ -1,7 +1,13 @@
 import { useContext } from 'react';
 import { ThemeContext } from './ThemeProvider';
 
+interface ThemeType {
+  theme: string;
+  toggleTheme: () => void
+}
+
 function ToggleButton() {
+  // @ts-ignore
   const { theme, toggleTheme } = useContext(ThemeContext)
   return (
     <button

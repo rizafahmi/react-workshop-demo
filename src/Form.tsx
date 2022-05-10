@@ -11,14 +11,34 @@ function Form({ handleData }: FormProp) {
   const [name, setName] = useState("");
 
   useEffect(function () {
-    console.log("Form Muncul");
     document.title = `New Player: ${name}`;
 
     return function () {
       console.log("Form menghilang");
+    }
+
+  }, [name]);
+
+  // Did mount
+  useEffect(function () {
+    console.log("Dijalankan hanya sekali");
+
+    // Unmount
+    return function () {
+      console.log("Unmounting");
 
     }
 
+  }, []);
+
+  // re-render
+  useEffect(function () {
+    console.log('Dijalankan setiap render');
+  });
+
+  // didUpdate
+  useEffect(function () {
+    console.log("Dijalankan ketika variable/state name berubah");
   }, [name]);
 
   function handleChange(event: { target: { value: string } }) {
